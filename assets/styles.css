@@ -1,0 +1,267 @@
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 3rem;
+    color: red;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+header .logo:hover {
+    transform: scale(1.05);
+}
+
+.intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-content h2 {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 1px 1px 10px rgba(255, 0, 0, 0.4);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.intro-content h2:hover {
+    transform: scale(1.05);
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+    max-width: 500px;
+    line-height: 1.6;
+    transition: transform 0.3s ease;
+}
+
+.intro-content p:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: darkred;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.logo-img {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.header-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.header-info:hover {
+    transform: scale(1.05);
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.red-text {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.download-btn {
+    background-color: black;
+    color: #ff0000;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background-color: darkred;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #d42020;
+    transition: transform 0.3s ease;
+}
+
+.card h3:hover {
+    transform: scale(1.05);
+}
+
+.card .price {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #b81919;
+}
+
+.card .description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.features {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features li {
+    margin: 5px 0;
+    color: #b0b0b0;
+    transition: transform 0.3s ease;
+}
+
+.features li:hover {
+    transform: scale(1.05);
+}
+
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #470000;
+    transform: scale(1.05);
+}
+
+.discord-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.discord-btn:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+.discord-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.discord-btn2 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #000000;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+    height: 30px;
+    min-width: 120px;
+}
+
+.discord-btn2:hover {
+    background-color: #ff0000;
+    transform: scale(1.05);
+}
+
+.discord-btn2 img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
