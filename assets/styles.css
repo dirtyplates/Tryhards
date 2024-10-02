@@ -394,3 +394,54 @@ header {
         opacity: 0; /* Fade out */
     }
 }
+
+.sponsor-section {
+    position: absolute; /* Position it in the top left */
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center the items vertically */
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    padding: 15px; /* Space around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    font-weight: bold; /* Make text bold */
+}
+
+.sponsor-logo {
+    width: 60px; /* Increased logo width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between logo and text */
+}
+
+.sponsor-text {
+    color: black; /* Text color */
+    font-size: 1.2em; /* Increased font size */
+    margin-right: 15px; /* Space between text and link */
+}
+
+.invite-button {
+    display: inline-block;
+    padding: 12px 24px; /* Increased padding */
+    margin-top: 0; /* Removed margin above the button */
+    background-color: #000000; /* Bright red background */
+    color: #fff; /* Text color */
+    border: 2px solid #fff; /* White border */
+    border-radius: 8px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.1em; /* Increased font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Animation */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.invite-button:hover {
+    background-color: #fff; /* Change background on hover */
+    color: #838080; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.invite-button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+}
