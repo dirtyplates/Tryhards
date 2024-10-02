@@ -1,0 +1,45 @@
+/* Spotlight effect */
+#spotlight {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, transparent 0%, rgba(0, 0, 0, 0.8) 70%, black 100%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%; /* Ensure it is circular */
+    animation: spotlight-expand 3s forwards;
+    z-index: 0; /* Lower z-index to place it behind main content */
+}
+
+/* Keyframes for spotlight expanding */
+@keyframes spotlight-expand {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    50% {
+        width: 300px;  /* Maximum size for the spotlight */
+        height: 300px; /* Maintain circular shape */
+        opacity: 1;
+    }
+    100% {
+        width: 2000px; /* Large size for full coverage */
+        height: 2000px; /* Ensure height matches width */
+        opacity: 0;
+    }
+}
+
+/* Hidden content that appears after spotlight */
+.main-content {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    position: relative; /* Ensure it is positioned above spotlight */
+    z-index: 1; /* Higher z-index to place it above spotlight */
+}
+
+/* Content will be fully visible after spotlight */
+.main-content.show {
+    opacity: 1;
+}

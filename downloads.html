@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="assets/logo.webp" type="image/png">
+    <link rel="icon" href="assets/images/logo.webp" type="image/webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Tryhards - Downloads</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/spotlight.css"> <!-- Add spotlight.css if needed -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script defer src="assets/particles-config.js"></script>
-    <script defer src="assets/spark.js"></script> 
+    <script defer src="assets/js/particles-config.js"></script>
+    <script defer src="assets/js/spark.js"></script>
 </head>
 <body>
     <div id="particles-js"></div>
+    <div id="spotlight"></div> <!-- Spotlight effect div -->
     <div class="main-content">
         <header>
             <a href="index.html" class="back-btn">Back to Home</a>
             <a href="https://discord.gg/XbdtM5NJAc" class="discord-btn" target="_blank">
-                <img src="assets/discordlogo.png" alt="Discord Logo" class="discord-logo"> Join us on Discord
+                <img src="assets/images/discordlogo.png" alt="Discord Logo" class="discord-logo"> Join us on Discord
             </a>
-            <img src="assets/logo.webp" alt="Tryhards Logo" class="logo-img">
+            <img src="assets/images/logo.webp" alt="Tryhards Logo" class="logo-img">
             <h1 class="logo">Tryhards Downloads</h1>
         </header>
         <section class="card-container">
@@ -73,9 +75,20 @@
             </div>
         </section>
     </div>
+    
+    <div class="footer">
+        Sponsored by <strong>Home Bound</strong> | Discord: <a href="https://discord.gg/pchNpzmAJP">Join:D</a>
+    </div>
+    
+    <script>
+        // Wait for the window to load before executing the spotlight effect
+        window.onload = function() {
+            const spotlight = document.getElementById('spotlight');
+            const mainContent = document.querySelector('.main-content');
+            
+            // Trigger the show class to make main content visible
+            mainContent.classList.add('show');
+        };
+    </script>
 </body>
 </html>
-
-<div class="footer">
-    Sponsored by <strong>Home Bound</strong> | Discord: <a href="https://discord.gg/pchNpzmAJP">Join:D</a>
-</div>
