@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Tryhards - Downloads</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/spotlight.css"> <!-- Add spotlight.css if needed -->
+    <link rel="stylesheet" href="assets/css/spotlight.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script defer src="assets/js/particles-config.js"></script>
     <script defer src="assets/js/spark.js"></script>
 </head>
 <body>
     <div id="particles-js"></div>
-    <div id="spotlight"></div> <!-- Spotlight effect div -->
+    <div id="spotlight"></div>
     <div class="main-content">
         <header>
             <a href="index.html" class="back-btn">Back to Home</a>
@@ -81,12 +81,10 @@
     </div>
     
     <script>
-        // Wait for the window to load before executing the spotlight effect
         window.onload = function() {
             const spotlight = document.getElementById('spotlight');
             const mainContent = document.querySelector('.main-content');
             
-            // Trigger the show class to make main content visible
             mainContent.classList.add('show');
         };
     </script>

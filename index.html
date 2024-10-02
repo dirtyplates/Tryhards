@@ -47,22 +47,18 @@
             </div>
         </section>
 
-        <!-- Device Detection Message -->
         <div id="device-message" style="margin-top: 20px; font-size: 1.5em;"></div>
     </div>
 
     <script>
-        // Function to detect device type
         function detectDevice() {
             const userAgent = navigator.userAgent;
 
             if (/Mobi|Android/i.test(userAgent)) {
-                // If it's a mobile device, redirect to unsupported.html
-                window.location.href = "unsupported.html"; // Redirect to unsupported page
+                window.location.href = "unsupported.html";
             } else {
-                // If it's a desktop device
                 document.getElementById('stylesheet').setAttribute('href', 'assets/css/styles.css');
-                document.querySelector('.main-content').classList.add('show'); // Show content after spotlight
+                document.querySelector('.main-content').classList.add('show');
             }
         }
 
@@ -70,7 +66,7 @@
             detectDevice();
             setTimeout(() => {
                 document.querySelector('.main-content').classList.add('show');
-            }, 3000); // Adjust this time if necessary
+            }, 3000);
         };
     </script>
 

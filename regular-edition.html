@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="particles-js"></div>
-    <div id="spotlight"></div> <!-- Spotlight effect div -->
+    <div id="spotlight"></div>
     <div class="main-content">
         <header>
             <img src="assets/images/logo.webp" alt="Tryhards Logo" class="logo-img">
@@ -43,12 +43,10 @@
     </div>
 
     <script>
-        // Wait for the window to load before executing the spotlight effect
         window.onload = function() {
             const spotlight = document.getElementById('spotlight');
             const mainContent = document.querySelector('.main-content');
             
-            // Trigger the show class to make main content visible
             mainContent.classList.add('show');
         };
     </script>
