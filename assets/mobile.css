@@ -88,3 +88,39 @@ header {
     margin-top: 20px; /* Space above the message */
     font-size: 1.2em; /* Adjust font size */
 }
+
+.card-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards */
+    margin: 20px; /* Margin for spacing */
+    overflow-y: auto; /* Allow vertical scrolling */
+    max-height: 100vh; /* Prevent overflow */
+}
+
+.card {
+    background-color: #222; /* Dark background for cards */
+    border: 1px solid #444; /* Border for cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Inner padding for content */
+    margin-bottom: 20px; /* Space between cards */
+    width: 90%; /* Responsive width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+.download-btn {
+    background-color: #ff4747; /* Red color for download button */
+    color: #fff; /* White text on button */
+    padding: 10px 20px; /* Padding for button */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded button corners */
+}
+
+.download-btn:hover {
+    background-color: #e63939; /* Darker red on hover */
+}
