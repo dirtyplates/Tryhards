@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tryhards</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link id="stylesheet" rel="stylesheet" href="assets/styles.css"> <!-- Set default stylesheet -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script defer src="assets/particles-config.js"></script>
     <script defer src="assets/spark.js"></script> <!-- Include spark.js -->
@@ -30,7 +30,32 @@
                 <a href="downloads.html" class="btn">Downloads</a>
             </div>
         </section>
+
+        <!-- Device Detection Message -->
+        <div id="device-message" style="margin-top: 20px; font-size: 1.5em;"></div>
     </div>
+
+    <script>
+        // Function to detect device type
+        function detectDevice() {
+            const userAgent = navigator.userAgent;
+            const deviceMessage = document.getElementById('device-message');
+
+            if (/Mobi|Android/i.test(userAgent)) {
+                // If it's a mobile device
+                deviceMessage.textContent = "You are on: Mobile";
+                document.getElementById('stylesheet').setAttribute('href', 'assets/mobile.css');
+            } else {
+                // If it's a desktop device
+                deviceMessage.textContent = "You are on: Desktop";
+                document.getElementById('stylesheet').setAttribute('href', 'assets/styles.css');
+            }
+        }
+
+        // Call the function on page load
+        window.onload = detectDevice;
+    </script>
+
     <script src="assets/floating-logo.js"></script>
 </body>
 </html>
