@@ -177,15 +177,23 @@ header .logo:hover {
     left: 10px;
     background-color: red;
     color: white;
-    padding: 10px 15px;
+    padding: 15px 25px; /* Increased padding for a bolder look */
+    font-size: 1.2em; /* Larger font size */
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px; /* More rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
 }
 
 .back-btn:hover {
-    background-color: #470000;
-    transform: scale(1.05);
+    background-color: #470000; /* Darker shade on hover */
+    transform: scale(1.1) rotate(3deg); /* Slightly enlarge and rotate on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */
+}
+
+.back-btn:active {
+    transform: scale(0.95); /* Shrink slightly on click */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Reset shadow on click */
 }
 
 .discord-btn {
@@ -444,4 +452,25 @@ header {
 
 .invite-button:active {
     transform: scale(0.95); /* Slightly shrink on click */
+}
+
+.footer {
+    position: fixed; /* Keep the footer fixed at the bottom */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
+    color: white; /* Text color */
+    text-align: center; /* Centered text */
+    padding: 10px; /* Padding for spacing */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.footer a {
+    color: #00bfff; /* Bright blue color for the link */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
