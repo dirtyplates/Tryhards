@@ -80,17 +80,17 @@ header .logo:hover {
 }
 
 .logo-img {
-    width: 100px; /* Set your desired width */
-    height: auto; /* Maintain aspect ratio */
-    animation: spin 4s linear infinite; /* Spinning animation */
+    width: 100px; 
+    height: auto; 
+    animation: spin 4s linear infinite; 
 }
 
 @keyframes spin {
     from {
-        transform: rotate(0deg); /* Start from 0 degrees */
+        transform: rotate(0deg); 
     }
     to {
-        transform: rotate(360deg); /* Spin to 360 degrees */
+        transform: rotate(360deg); 
     }
 }
 
@@ -177,23 +177,23 @@ header .logo:hover {
     left: 10px;
     background-color: red;
     color: white;
-    padding: 15px 25px; /* Increased padding for a bolder look */
-    font-size: 1.2em; /* Larger font size */
+    padding: 15px 25px; 
+    font-size: 1.2em; 
     text-decoration: none;
-    border-radius: 8px; /* More rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
 }
 
 .back-btn:hover {
-    background-color: #470000; /* Darker shade on hover */
-    transform: scale(1.1) rotate(3deg); /* Slightly enlarge and rotate on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */
+    background-color: #470000; 
+    transform: scale(1.1) rotate(3deg); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); 
 }
 
 .back-btn:active {
-    transform: scale(0.95); /* Shrink slightly on click */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Reset shadow on click */
+    transform: scale(0.95); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .discord-btn {
@@ -260,16 +260,16 @@ header .logo:hover {
 }
 
 .logo-img {
-    width: 100px; /* Increased size for the logo */
+    width: 100px; 
     height: auto;
-    margin-right: 15px; /* Adds space between the logo and the text */
+    margin-right: 15px; 
 }
 
 .logo {
-    font-size: 3.5rem; /* Increase the font size for the text if needed */
+    font-size: 3.5rem; 
     color: red;
     text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
-    margin: 0; /* Remove default margins */
+    margin: 0; 
     transition: transform 0.3s ease;
 }
 
@@ -278,23 +278,23 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden; 
 }
 
 #particles-js {
-    position: fixed; /* Keep particles fixed in the background */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: black;
-    z-index: -1; /* Ensure particles stay in the background */
+    z-index: -1; 
 }
 
 .main-content {
     position: relative;
     z-index: 1;
-    min-height: 100vh; /* Ensure the content takes up at least full viewport height */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -319,10 +319,10 @@ header {
 }
 
 .floating-logo img {
-    opacity: 0.7; /* Adjust this value for transparency (0.0 to 1.0) */
-    width: 100px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    animation: rotate 5s linear infinite; /* Rotation effect */
+    opacity: 0.7; 
+    width: 100px; 
+    height: auto; 
+    animation: rotate 5s linear infinite; 
 }
 
 @keyframes rotate {
@@ -336,12 +336,12 @@ header {
 
 .spark {
     position: absolute;
-    width: 5px; /* Size of the spark */
-    height: 5px; /* Size of the spark */
-    background-color: rgba(255, 0, 0, 0.9); /* Color of the sparks */
-    border-radius: 50%; /* Round shape */
-    pointer-events: none; /* Prevent interference with mouse events */
-    animation: sparkAnimation 0.5s forwards; /* Animation for spark effect */
+    width: 5px; 
+    height: 5px; 
+    background-color: rgba(255, 0, 0, 0.9); 
+    border-radius: 50%; 
+    pointer-events: none; 
+    animation: sparkAnimation 0.5s forwards; 
 }
 
 @keyframes sparkAnimation {
@@ -350,21 +350,21 @@ header {
         opacity: 1;
     }
     100% {
-        transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(0); /* Move spark */
-        opacity: 0; /* Fade out */
+        transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(0); 
+        opacity: 0; 
     }
 }
 
 .big-spark {
     position: absolute;
-    width: 20px; /* Size of big sparks */
-    height: 20px; /* Size of big sparks */
-    background-color: #ff4500; /* Color of the big spark */
-    border-radius: 50%; /* Make them round */
-    pointer-events: none; /* Prevent interference with mouse events */
-    opacity: 1; /* Start fully visible */
-    transform: translate(-50%, -50%); /* Center big sparks on the cursor */
-    animation: explode 0.5s forwards; /* Explosion animation */
+    width: 20px; 
+    height: 20px; 
+    background-color: #ff4500; 
+    border-radius: 50%; 
+    pointer-events: none; 
+    opacity: 1; 
+    transform: translate(-50%, -50%); 
+    animation: explode 0.5s forwards; 
 }
 
 @keyframes explode {
@@ -373,19 +373,19 @@ header {
         opacity: 1;
     }
     100% {
-        transform: translate(-50%, -50%) scale(3); /* Make it bigger */
-        opacity: 0; /* Fade out to invisible */
+        transform: translate(-50%, -50%) scale(3); 
+        opacity: 0; 
     }
 }
 
 .fire-effect {
     position: absolute;
-    width: 30px; /* Base size of the fire */
-    height: 30px; /* Base size of the fire */
-    background-color: rgba(255, 69, 0, 0.8); /* Fire color */
-    border-radius: 50%; /* Round shape */
-    pointer-events: none; /* Prevent interference with mouse events */
-    animation: flameAnimation 0.8s forwards; /* Animation for fire effect */
+    width: 30px; 
+    height: 30px; 
+    background-color: rgba(255, 69, 0, 0.8); 
+    border-radius: 50%; 
+    pointer-events: none; 
+    animation: flameAnimation 0.8s forwards; 
 }
 
 @keyframes flameAnimation {
@@ -394,83 +394,83 @@ header {
         opacity: 1;
     }
     50% {
-        transform: translate(-50%, -50%) scale(1.5); /* Make it bigger at midpoint */
-        opacity: 1; /* Keep it visible at midpoint */
+        transform: translate(-50%, -50%) scale(1.5); 
+        opacity: 1; 
     }
     100% {
-        transform: translate(-50%, -50%) scale(0); /* Shrink to nothing */
-        opacity: 0; /* Fade out */
+        transform: translate(-50%, -50%) scale(0); 
+        opacity: 0; 
     }
 }
 
 .sponsor-section {
-    position: absolute; /* Position it in the top left */
-    top: 10px; /* Adjust as needed */
-    left: 10px; /* Adjust as needed */
-    display: flex; /* Align items in a row */
-    align-items: center; /* Center the items vertically */
-    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
-    padding: 15px; /* Space around the content */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    font-weight: bold; /* Make text bold */
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    display: flex; 
+    align-items: center; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 15px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    font-weight: bold; 
 }
 
 .sponsor-logo {
-    width: 60px; /* Increased logo width */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 15px; /* Space between logo and text */
+    width: 60px; 
+    height: auto; 
+    margin-right: 15px; 
 }
 
 .sponsor-text {
-    color: black; /* Text color */
-    font-size: 1.2em; /* Increased font size */
-    margin-right: 15px; /* Space between text and link */
+    color: black; 
+    font-size: 1.2em; 
+    margin-right: 15px; 
 }
 
 .invite-button {
     display: inline-block;
-    padding: 12px 24px; /* Increased padding */
-    margin-top: 0; /* Removed margin above the button */
-    background-color: #000000; /* Bright red background */
-    color: #fff; /* Text color */
-    border: 2px solid #fff; /* White border */
-    border-radius: 8px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-size: 1.1em; /* Increased font size */
-    font-weight: bold; /* Bold text */
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Animation */
-    cursor: pointer; /* Pointer cursor */
+    padding: 12px 24px; 
+    margin-top: 0; 
+    background-color: #000000; 
+    color: #fff; 
+    border: 2px solid #fff; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    font-size: 1.1em; 
+    font-weight: bold; 
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    cursor: pointer; 
 }
 
 .invite-button:hover {
-    background-color: #fff; /* Change background on hover */
-    color: #838080; /* Change text color on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    background-color: #fff; 
+    color: #838080; 
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
 .invite-button:active {
-    transform: scale(0.95); /* Slightly shrink on click */
+    transform: scale(0.95); 
 }
 
 .footer {
-    position: fixed; /* Keep the footer fixed at the bottom */
+    position: fixed; 
     left: 0;
     bottom: 0;
-    width: 100%; /* Full width */
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
-    color: white; /* Text color */
-    text-align: center; /* Centered text */
-    padding: 10px; /* Padding for spacing */
-    z-index: 1000; /* Ensure it appears above other elements */
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+    z-index: 1000; 
 }
 
 .footer a {
-    color: #00bfff; /* Bright blue color for the link */
-    text-decoration: none; /* Remove underline from link */
+    color: #00bfff; 
+    text-decoration: none; 
 }
 
 .footer a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; 
 }
