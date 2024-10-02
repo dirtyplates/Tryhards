@@ -44,15 +44,12 @@
         // Function to detect device type
         function detectDevice() {
             const userAgent = navigator.userAgent;
-            const deviceMessage = document.getElementById('device-message');
 
             if (/Mobi|Android/i.test(userAgent)) {
-                // If it's a mobile device
-                deviceMessage.textContent = "You are on: Mobile";
-                document.getElementById('stylesheet').setAttribute('href', 'assets/mobile.css');
+                // If it's a mobile device, redirect to unsupported.html
+                window.location.href = "unsupported.html"; // Redirect to unsupported page
             } else {
                 // If it's a desktop device
-                deviceMessage.textContent = "You are on: Desktop";
                 document.getElementById('stylesheet').setAttribute('href', 'assets/styles.css');
             }
         }
@@ -61,9 +58,9 @@
         window.onload = detectDevice;
     </script>
 
-<div class="footer">
-    Sponsored by <strong>Home Bound</strong> | Discord: <a href="https://discord.gg/pchNpzmAJP">Join:D</a>
-</div>
+    <div class="footer">
+        Sponsored by <strong>Home Bound</strong> | Discord: <a href="https://discord.gg/pchNpzmAJP">Join:D</a>
+    </div>
 
     <script src="assets/floating-logo.js"></script>
 </body>
