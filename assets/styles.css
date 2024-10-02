@@ -80,38 +80,18 @@ header .logo:hover {
 }
 
 .logo-img {
-    width: 80px;
-    height: auto;
-    margin-right: 15px;
-    vertical-align: middle;
+    width: 100px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+    animation: spin 4s linear infinite; /* Spinning animation */
 }
 
-.header-info {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: white;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-    transition: transform 0.3s ease;
-}
-
-.header-info:hover {
-    transform: scale(1.05);
-}
-
-.profile-pic {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.red-text {
-    color: #FF0000;
-    font-weight: bold;
+@keyframes spin {
+    from {
+        transform: rotate(0deg); /* Start from 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* Spin to 360 degrees */
+    }
 }
 
 .download-btn {
@@ -264,4 +244,153 @@ header .logo:hover {
     width: 20px;
     height: 20px;
     margin-right: 5px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 100px; /* Increased size for the logo */
+    height: auto;
+    margin-right: 15px; /* Adds space between the logo and the text */
+}
+
+.logo {
+    font-size: 3.5rem; /* Increase the font size for the text if needed */
+    color: red;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+    margin: 0; /* Remove default margins */
+    transition: transform 0.3s ease;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+#particles-js {
+    position: fixed; /* Keep particles fixed in the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1; /* Ensure particles stay in the background */
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh; /* Ensure the content takes up at least full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.floating-logo img {
+    opacity: 0.7; /* Adjust this value for transparency (0.0 to 1.0) */
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    animation: rotate 5s linear infinite; /* Rotation effect */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spark {
+    position: absolute;
+    width: 5px; /* Size of the spark */
+    height: 5px; /* Size of the spark */
+    background-color: rgba(255, 0, 0, 0.9); /* Color of the sparks */
+    border-radius: 50%; /* Round shape */
+    pointer-events: none; /* Prevent interference with mouse events */
+    animation: sparkAnimation 0.5s forwards; /* Animation for spark effect */
+}
+
+@keyframes sparkAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(0); /* Move spark */
+        opacity: 0; /* Fade out */
+    }
+}
+
+.big-spark {
+    position: absolute;
+    width: 20px; /* Size of big sparks */
+    height: 20px; /* Size of big sparks */
+    background-color: #ff4500; /* Color of the big spark */
+    border-radius: 50%; /* Make them round */
+    pointer-events: none; /* Prevent interference with mouse events */
+    opacity: 1; /* Start fully visible */
+    transform: translate(-50%, -50%); /* Center big sparks on the cursor */
+    animation: explode 0.5s forwards; /* Explosion animation */
+}
+
+@keyframes explode {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(3); /* Make it bigger */
+        opacity: 0; /* Fade out to invisible */
+    }
+}
+
+.fire-effect {
+    position: absolute;
+    width: 30px; /* Base size of the fire */
+    height: 30px; /* Base size of the fire */
+    background-color: rgba(255, 69, 0, 0.8); /* Fire color */
+    border-radius: 50%; /* Round shape */
+    pointer-events: none; /* Prevent interference with mouse events */
+    animation: flameAnimation 0.8s forwards; /* Animation for fire effect */
+}
+
+@keyframes flameAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5); /* Make it bigger at midpoint */
+        opacity: 1; /* Keep it visible at midpoint */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0); /* Shrink to nothing */
+        opacity: 0; /* Fade out */
+    }
 }
