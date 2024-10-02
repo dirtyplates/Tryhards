@@ -1,0 +1,88 @@
+/* Reset some default styles for mobile devices */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Use a generic sans-serif font */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#particles-js {
+    display: none; /* Hide particles background on mobile for better performance */
+}
+
+.main-content {
+    padding: 10px; /* Add some padding around the main content */
+    text-align: center; /* Center text for mobile layout */
+}
+
+header {
+    margin-bottom: 20px; /* Space between header and content */
+}
+
+.logo-img {
+    width: 50%; /* Make logo responsive */
+    max-width: 150px; /* Limit max size for logo */
+}
+
+.logo {
+    font-size: 2em; /* Adjust font size for mobile */
+    margin: 10px 0; /* Space above and below the logo */
+}
+
+.discord-btn2 {
+    display: inline-block; /* Make button inline */
+    margin: 15px 0; /* Space around the button */
+    padding: 10px 15px; /* Button padding */
+    background-color: #7289da; /* Discord color */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+}
+
+.discord-btn2:hover {
+    background-color: #5a6e9a; /* Darker shade on hover */
+}
+
+.intro-section {
+    margin: 20px 0; /* Space above and below the intro section */
+}
+
+.intro-content {
+    padding: 20px; /* Add padding around the intro content */
+}
+
+.intro-content h2 {
+    font-size: 1.5em; /* Adjust font size */
+}
+
+.btn {
+    display: inline-block; /* Make button inline */
+    margin-top: 10px; /* Space above the button */
+    padding: 10px 20px; /* Button padding */
+    background-color: #ff4500; /* Button color */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+}
+
+.btn:hover {
+    background-color: #e63900; /* Darker shade on hover */
+}
+
+/* Floating logo styles */
+.floating-logo {
+    position: fixed; /* Keep floating logo fixed */
+    bottom: 20px; /* Position at the bottom */
+    right: 20px; /* Position at the right */
+    z-index: 999; /* Ensure it’s on top */
+}
+
+.floating-logo img {
+    width: 50px; /* Adjust size of the floating logo */
+}
+
+/* Device message */
+#device-message {
+    margin-top: 20px; /* Space above the message */
+    font-size: 1.2em; /* Adjust font size */
+}
