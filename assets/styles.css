@@ -1,230 +1,267 @@
-/* General Styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-color: black;
-    color: white;
-    overflow-x: hidden;
+    z-index: -1;
 }
 
 .main-content {
     position: relative;
     z-index: 1;
-}
-
-/* Particle Background */
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    top: 0;
-    left: 0;
-}
-
-/* Header */
-header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    padding: 20px;
-    position: relative;
-    z-index: 1;
 }
 
-.logo-img {
-    max-width: 150px;
-    height: auto;
-}
-
-.logo {
+header .logo {
     font-size: 3rem;
-    margin: 10px 0;
     color: red;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
-.header-info {
+header .logo:hover {
+    transform: scale(1.05);
+}
+
+.intro-section {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.owner {
-    display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.profile-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.owner-text {
-    font-size: 1rem;
-}
-
-.white-text {
-    color: white;
-}
-
-.red-text {
-    color: red;
-}
-
-/* Discord Button */
-.discord-btn, .discord-btn2 {
-    display: inline-block;
-    background-color: red;
-    padding: 10px 20px;
-    color: white;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: background-color 0.3s;
-}
-
-.discord-btn img, .discord-btn2 img {
-    width: 24px;
-    height: auto;
-}
-
-.discord-btn:hover, .discord-btn2:hover {
-    background-color: darkred;
-}
-
-/* Intro Section */
-.intro-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: rgba(0, 0, 0, 0.6);
+    flex-direction: column;
 }
 
 .intro-content h2 {
     font-size: 2.5rem;
     color: white;
+    text-shadow: 1px 1px 10px rgba(255, 0, 0, 0.4);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.intro-content h2:hover {
+    transform: scale(1.05);
 }
 
 .intro-content p {
     font-size: 1.2rem;
-    color: white;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+    max-width: 500px;
+    line-height: 1.6;
+    transition: transform 0.3s ease;
 }
 
-.intro-content .btn {
+.intro-content p:hover {
+    transform: scale(1.05);
+}
+
+.btn {
     background-color: red;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-size: 1.2rem;
-    border-radius: 5px;
     text-decoration: none;
-    margin-top: 20px;
-    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.intro-content .btn:hover {
+.btn:hover {
     background-color: darkred;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.3);
 }
 
-/* Card Styles */
+.logo-img {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.header-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.header-info:hover {
+    transform: scale(1.05);
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.red-text {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.download-btn {
+    background-color: black;
+    color: #ff0000;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background-color: darkred;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
 .card-container {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px 20px;
+    margin: 40px 0;
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
     padding: 20px;
-    border-radius: 10px;
-    max-width: 300px;
+    width: 300px;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .card h3 {
-    font-size: 1.5rem;
-    color: white;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #d42020;
+    transition: transform 0.3s ease;
 }
 
-.card p {
-    font-size: 1rem;
-    color: white;
-    margin-bottom: 10px;
+.card h3:hover {
+    transform: scale(1.05);
 }
 
 .card .price {
-    font-size: 1.2rem;
-    color: red;
-    margin-bottom: 20px;
-}
-
-.card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.card ul li {
-    color: white;
+    font-size: 1.5rem;
     margin-bottom: 10px;
+    color: #b81919;
 }
 
-.card .download-btn {
-    background-color: red;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s;
+.card .description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #e0e0e0;
 }
 
-.card .download-btn:hover {
-    background-color: darkred;
+.features {
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Back Button */
+.features li {
+    margin: 5px 0;
+    color: #b0b0b0;
+    transition: transform 0.3s ease;
+}
+
+.features li:hover {
+    transform: scale(1.05);
+}
+
 .back-btn {
-    display: inline-block;
-    margin: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
     background-color: red;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .back-btn:hover {
-    background-color: darkred;
+    background-color: #470000;
+    transform: scale(1.05);
 }
 
-/* Mobile Friendly Adjustments */
-@media screen and (max-width: 768px) {
-    .header-info {
-        flex-direction: column;
-    }
+.discord-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
 
-    .intro-content h2 {
-        font-size: 2rem;
-    }
+.discord-btn:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
 
-    .card-container {
-        flex-direction: column;
-    }
+.discord-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
 
-    .card {
-        width: 100%;
-        max-width: 100%;
-    }
+.discord-btn2 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #000000;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+    height: 30px;
+    min-width: 120px;
+}
+
+.discord-btn2:hover {
+    background-color: #ff0000;
+    transform: scale(1.05);
+}
+
+.discord-btn2 img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
